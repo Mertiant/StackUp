@@ -26,17 +26,33 @@ function showPosition(position) {
     x.innerHTML = "Latitude: " + latitude + 
     "<br>Longitude: " + longitude;
 }
+getLocation();
+</script>
 
+<script>
 function getWeatherInfo(){
+    var latitude = 30;
+    var longtitude = 100;
 	var xmlHttp = new XMLHttpRequest();
 	var baseUrl = 'api.openweathermap.org/data/2.5/';
 	var data = 'weather?lat='+ latitude + '&lon=' + longitude + '&appid=f2c22e03c57c5693407f724da31d21ba';
-	xmlHttp.open("GET", baseUrl+data; true);
+       alert(xmlHttp.status);
+
+	//xmlHttp.open('GET', baseUrl+data; true);
+   // xmlHttp.send();
+   // alert(xmlHttp.status);
+    xmlHttp.onreadystatechange = function() {
+        if (xmlHttp.readyState == 4) {
+            var response = xhr.responseText;
+            alert(response);
+        }
+        if (xmlHttp.status == 0) {
+            alert('.....');
+        }
+    }
 }
 
-getLocation();
 getWeatherInfo();
-
 </script>
 
 </body>
