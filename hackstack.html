@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Click the button to get your coordinates.</p>
+
+<p id="demo"></p>
+
+<script>
+var x = document.getElementById("demo");
+var latitude;
+var longitude;
+var response;
+
+function getLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+    } else { 
+        x.innerHTML = "Geolocation is not supported by this browser.";
+    }
+}
+
+function showPosition(position) {
+	latitude = position.coords.latitude;
+	longitude = position.coords.longitude;
+    x.innerHTML = "Latitude: " + latitude + 
+    "<br>Longitude: " + longitude;
+}
+
+function getWeatherInfo(){
+	var xmlHttp = new XMLHttpRequest();
+	var baseUrl = 'api.openweathermap.org/data/2.5/';
+	var data = 'weather?lat='+ latitude + '&lon=' + longitude + '&appid=f2c22e03c57c5693407f724da31d21ba';
+	xmlHttp.open("GET", baseUrl+data; true);
+}
+
+getLocation();
+getWeatherInfo();
+
+</script>
+
+</body>
+</html>
