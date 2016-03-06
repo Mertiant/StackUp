@@ -1,0 +1,35 @@
+.jumbotron {
+  background-size: cover;
+  width: 1450px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#wrapper img {
+  width:100%;
+  position: relative;
+  top:-50px;
+}
+
+body {
+  padding-top: 0px;
+  padding-bottom: 40px;
+  background-color: #e3e3e3;
+}
+
+.search .container{
+	margin-top: -7%;
+}
+.search .form-section{
+	background:rgba(0,0,0,0.6);
+	border: 2px solid #414141;
+	border-radius: 5px;
+	padding: 10px;
+}
+.rec {
+	background-color: #ffffff;
+}
+
+.rec img {
+	align: "middle";
+}

@@ -1,0 +1,23 @@
+.jumbotron {
+  align: "middle";
+  background-size: cover;
+  width: 1500px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#wrapper .jumbotron img {
+  position: absolute;
+  top:-100px;
+   width: 100%;
+   height: auto;
+}
+
+.env {
+	background-color: #ffffff;
+}
+.env img {
+	background-color: #ffffff;
+	position: relative;
+	left:125px;
+}
